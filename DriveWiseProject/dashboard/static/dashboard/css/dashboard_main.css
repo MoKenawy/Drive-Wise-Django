@@ -1,0 +1,18 @@
+
+.average-rating {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* Blue color for emphasis */
+}
+
+.leaderboard-item {
+    padding: 10px;
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #dee2e6; /* Gray border */
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.leaderboard-item:hover {
+    background-color: #e9ecef; /* Hover effect */
+}

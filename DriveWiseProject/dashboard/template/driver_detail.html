@@ -1,0 +1,37 @@
+{% extends "dashboard_template.html" %}
+
+{% block js_scripts_headers %}
+{% load static %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <h4 class="my-4">Driver: {{ driver_id }}</h4>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ driver_data.name }}</h5>
+            <p class="card-text">Rating: {{ driver_data.rating }}</p>
+            <h6 class="card-subtitle mb-2 text-muted">Violations</h6>
+            <p class="card-text">Total Violations: {{ violations_stats.violations_count }}</p>
+            <p id="speedViolationCount" hidden>{{ violations_stats.speed_violation_count }}</p>
+            <p id="distanceViolationCount" hidden>{{ violations_stats.distance_violation_count }}</p>
+            <p id="drowsinessViolationCount" hidden>{{ violations_stats.drowsiness_violation_count }}</p>
+            <p class="card-text" >Speed Violations : {{ violations_stats.speed_violation_count }}</p>
+            <p class="card-text" >Distance Violations : {{ violations_stats.distance_violation_count }}</p>
+            <p class="card-text" >Drowsiness Violations : {{ violations_stats.drowsiness_violation_count }}</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <canvas id="violationsChart"></canvas>
+    </div>
+</div>
+{% endblock %}
+
+{% block js_scripts_body %}
+<script src="{% static 'dashboard/js/violations_chart.js' %}"></script>
+
+{% endblock %}

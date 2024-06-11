@@ -1,0 +1,81 @@
+{% extends "dashboard_template.html" %}
+
+{% block js_scripts_headers %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'dashboard/css/dashboard_main.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+<body>
+<div class="container">
+    <!-- <h1 class="mt-4 mb-4">Fleet Management Dashboard</h1> -->
+    
+    <div class="row">
+        <div class="col-md-6">
+
+        <!-- Average Rating -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Average Rating (for all drivers)</h5>
+                    <p class="average-rating">{{ average_rate }}</p>
+                </div>
+            </div>
+        </div>
+       
+            <!-- Best Driver -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body alert-success">
+                        <h5 class="card-title">Best Driver </h5>
+                        <p class="Driver ID">{{ best_driver.driver_id }}</p>
+                        <p class="rating">{{ best_driver.rating }}</p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Worst Driver -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body alert-danger">
+                            <h5 class="card-title">Worst Driver </h5>
+                            <p class="Driver ID">{{ worst_driver.driver_id }}</p>
+                            <p class="rating">{{ worst_driver.rating }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </br>
+        <!-- Leaderboard -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Leaderboard</h5>
+                    <div class="list-group">
+                        {% for driver in leaderboard %}
+                        <a href="{% url 'driver_detail' driver.driver_id %}" class="list-group-item list-group-item-action leaderboard-item">
+                            <span class="font-weight-bold">
+                                {{ forloop.counter }}. {{ driver.driver_id }}
+                            </span>
+                            <span class="float-right">Rating: {{ driver.rating }}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}
+
+
+{% block js_scripts_body %}
+
+
+{% endblock %}

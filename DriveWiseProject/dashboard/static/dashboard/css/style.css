@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.driver-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.driver-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+
+/* .driver-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.driver-photo-large {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+} */
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}

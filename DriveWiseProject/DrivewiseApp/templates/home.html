@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management AI Assistant</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Optional: Your custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Fleet AI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Welcome to our Fleet Management AI Assistant</h1>
+            <p class="lead">Streamlining fleet operations with artificial intelligence.</p>
+        </div>
+    </header>
+
+    <!-- Section 1: Safety Alerts -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Enhancing Safety</h2>
+                    <p>Our AI system helps drivers adhere to safe driving practices:</p>
+                    <ul>
+                        <li>Alerts for speed threshold violations</li>
+                        <li>Monitoring safe distance from other vehicles</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'images/safety-image.jpg' %}" alt="Safety Alerts" class="img-fluid rounded custom-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- templates/assistant/home.html -->
+
+    
+    <!-- Section 2: Driver Drowsiness Detection -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static 'images/drowsiness-image.jpg' %}" alt="Driver Drowsiness Detection" class="img-fluid rounded custom-image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Real-Time Drowsiness Detection</h2>
+                    <p>Our AI system continuously monitors driver behavior:</p>
+                    <ul>
+                        <li>Alerts for signs of drowsiness</li>
+                        <li>Prompt actions to prevent accidents</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Violations Tracking and Rating -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Driver Violations Tracking</h2>
+                    <p>Automatic tracking of driver violations:</p>
+                    <ul>
+                        <li>Speeding</li>
+                        <li>Unsafe lane changes</li>
+                        <!-- Add more violations as needed -->
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'images/Fleet_Management_Dashboard.jpg' %}" alt="Violations Tracking" class="img-fluid rounded custom-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add more sections as needed -->
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Contact us at info@fleetai.com</p>
+        </div>
+    </footer>
+    <!-- Include Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

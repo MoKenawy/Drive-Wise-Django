@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management Dashboard</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+
+    {% block js_scripts_headers %}
+
+    {% endblock %}
+
+
+</head>
+<body>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'dashboard' %}">Fleet Management Dashboard</a>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'add_driver' %}">Add Drivers <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+             
+            <div class="col-md-3 bg-white">
+                <div class="d-flex flex-column align-items-stretch flex-shrink-0" style="width: 100%;">
+                    <!-- <a href="{% url 'dashboard' %}" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                        <span class="fs-5 fw-semibold">Drivers</span>
+                    </a>
+                    <a href="{% url 'dashboard' %}" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                        <span class="fs-5 fw-semibold">Drivers</span>
+                    </a> -->
+
+
+                    <!-- Drivers List -->
+                    <div class="list-group list-group-flush border-bottom scrollarea">
+                        {% for driver in drivers %}
+                        <a href="{% url 'driver_detail' driver.driver_id %}" class="list-group-item list-group-item-action py-3 lh-tight">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <strong class="mb-1">{{ driver.driver_id }}</strong>
+                                
+                                <!-- <small>{{ driver.rating }}</small> -->
+                                <!-- <small class="rating-stars" data-rating="{{ driver.rating }}"></small> -->
+                                <div class="card-text">Rating: <span id="rating-stars" data-rating="{{ driver.rating }}"></span></div>
+
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="content">
+                    {% block content %}
+                    <!-- Driver details will be displayed here -->
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'dashboard/js/star_rating.js' %}"></script>
+
+    {% block js_scripts_body %}
+
+    {% endblock %}
+</body>
+</html>
