@@ -137,10 +137,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import firebase_admin
 from firebase_admin import credentials
+import os
+from dotenv import load_dotenv
 
-db_url = "https://graduation-project-3fd49-default-rtdb.firebaseio.com/"
-storage_bucket_url = "gs://graduation-project-3fd49.appspot.com"
-cred = credentials.Certificate("M:\\SJ (moved)\\Drive-Wise Django\\Creds\\graduation-project-Mostafa-Service_key.json")
+load_dotenv()
+
+db_url = os.environ.get('DB_URL')
+storage_bucket_url = os.environ.get('STORAGE_BUCKET_URL')
+creds_path = os.environ.get('FIREBASE_CREDS_FILEPATH')
+
+cred = credentials.Certificate(creds_path)
 firebase_admin.initialize_app(cred , {'databaseURL': db_url, 
                                     'storageBucket': storage_bucket_url
 })
