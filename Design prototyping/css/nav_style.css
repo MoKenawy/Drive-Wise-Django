@@ -26,14 +26,20 @@ header {
 .btn-login:hover {
     background-color: #1e7e34; /* Darker green background on hover */
     border: solid 1px #1e7e34; /* Darker green border on hover */
+    color: #ffffff; /* White text */
+
 }
 
 .btn-signup {
     background-color: #28a745; /* Green background for signup button */
     border-color: #28a745; /* Green border color */
+    color: #ffffff; /* White text */
+
 }
 
 .btn-signup:hover {
     background-color: #1e7e34; /* Darker green background on hover */
     border-color: #1e7e34; /* Darker green border color on hover */
+    color: #ffffff; /* White text */
+
 }

@@ -1,0 +1,25 @@
+/* Custom CSS for About Section */
+#about {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 50px 0;
+}
+
+#about h2 {
+    color: #333333; /* Dark text for main heading */
+    margin-bottom: 20px;
+}
+
+#about h3 {
+    color: #28a745; /* Green text for subheadings */
+    margin-top: 20px;
+}
+
+#about p {
+    color: #666666; /* Darker gray text for paragraphs */
+    line-height: 1.6; /* Improved readability */
+}
+
+#about img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow for depth */
+}
