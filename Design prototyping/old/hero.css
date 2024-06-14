@@ -1,0 +1,14 @@
+
+.hero {
+    background-color: #28a745; /* Green background */
+    color: #ffffff;
+    padding: 3rem 0; /* Ensure proper padding */
+}
+
+.hero h1, .hero p {
+    color: #ffffff;
+}
+
+.hero img {
+    border-radius: 0.5rem; /* Optional: Add rounded corners to the image */
+}

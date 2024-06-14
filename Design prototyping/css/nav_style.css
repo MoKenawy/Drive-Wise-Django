@@ -1,0 +1,39 @@
+/* Custom CSS for Header-based Navbar */
+header {
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a slight shadow for depth */
+}
+
+.navbar-brand {
+    color: #28a745; /* Green text for brand */
+}
+
+.nav-link {
+    color: #333333; /* Dark text for links */
+    margin-right: 20px; /* Adjust spacing between links */
+}
+
+.nav-link:hover {
+    color: #28a745; /* Green text on hover */
+}
+
+.btn-login {
+    background-color: #ffffff; /* Green background */
+    color: #28a745; /* White text */
+    border: solid 1px #28a745; /* Green border */
+}
+
+.btn-login:hover {
+    background-color: #1e7e34; /* Darker green background on hover */
+    border: solid 1px #1e7e34; /* Darker green border on hover */
+}
+
+.btn-signup {
+    background-color: #28a745; /* Green background for signup button */
+    border-color: #28a745; /* Green border color */
+}
+
+.btn-signup:hover {
+    background-color: #1e7e34; /* Darker green background on hover */
+    border-color: #1e7e34; /* Darker green border color on hover */
+}

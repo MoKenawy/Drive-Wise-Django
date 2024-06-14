@@ -1,0 +1,12 @@
+
+.testimonials {
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+.testimonials blockquote {
+    background: #ffffff;
+    padding: 1rem;
+    border-left: 5px solid #28a745; /* Green border for emphasis */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
