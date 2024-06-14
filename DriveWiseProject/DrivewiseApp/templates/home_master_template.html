@@ -27,13 +27,14 @@
     />
 
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/nav_style.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/features.css">
-    <link rel="stylesheet" href="css/testimonials.css">
-    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/body.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hero.css' %}">
+    <link rel="stylesheet" href="{% static 'css/features.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testimonials.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cta.css' %}">
+
 
     {% block additional_styles %}
 
@@ -44,35 +45,37 @@
 
     <!-- Navbar -->
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-0 mb-4 border-bottom">
-      <!-- <a href="/" class="d-flex align-items-center mb-2 mb-md-0 text-dark text-decoration-none">
 
-
-      </a> -->
 
       <div class="d-flex align-items-center">
 
-        <a class="navbar-brand me-1" href="#">
-          <img src="M:/SJ (moved)/Drive-Wise Django/Logos/download.png" alt="Drive wise Logo" width="75" height="60" >
+        <a class="navbar-brand me-1" href="{% url 'home' %}">
+          <img src="{% static 'images/logo.png' %}" alt="Drive wise Logo" width="75" height="60" >
         </a>
 
     </div>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 ">Home</a></li>
+          <li><a  href="{% url 'home' %}" class="nav-link px-2 ">Home</a></li>
           <li><a href="#features" class="nav-link px-2 ">Features</a></li>
           <li><a href="#" class="nav-link px-2 ">Pricing</a></li>
           <li><a href="#" class="nav-link px-2 ">FAQs</a></li>
-          <li><a href="about.html" class="nav-link px-2 ">About</a></li>
+          <li><a href="{% url 'about' %}" class="nav-link px-2 ">About</a></li>
           
       </ul>
       <div class="col-md-3 text-end">
-          <button type="button" class="btn me-2 btn-login">Login</button>
-          <button type="button" class="btn btn-signup">Sign-up</button>
+        <a href="{% url 'login' %}">
+            <button type="button" class="btn me-2 btn-login" >Login</button>
+        </a>
+        <a href="{% url 'register' %}">
+            <button type="button" class="btn btn-signup">Sign-up</button>
+
+        </a>
       </div>
 </header>
 
     {% block content %}
-
+        <!-- Child Content goes here -->
     {% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -82,6 +85,8 @@
     <script
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.umd.min.js"></script>
+
+    <script src="{% static 'js/home_scripts.js' %}"></script>
 
     {% block js_scripts %}
 

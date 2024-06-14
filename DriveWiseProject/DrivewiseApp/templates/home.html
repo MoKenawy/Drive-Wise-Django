@@ -1,117 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fleet Management AI Assistant</title>
-    {% load static %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Optional: Your custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% extends "home_master_template.html" %}
 
-</head>
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Fleet AI</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}">Register</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% block additional_styles %}
+{% load static %}
 
+{% endblock %}
 
-    <header class="bg-primary text-white py-5">
-        <div class="container text-center">
-            <h1 class="display-4">Welcome to our Fleet Management AI Assistant</h1>
-            <p class="lead">Streamlining fleet operations with artificial intelligence.</p>
-        </div>
-    </header>
+{% block content %}
+    <!-- Responsive Left-Aligned Hero Section with Image -->
 
-    <!-- Section 1: Safety Alerts -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="mb-4">Enhancing Safety</h2>
-                    <p>Our AI system helps drivers adhere to safe driving practices:</p>
-                    <ul>
-                        <li>Alerts for speed threshold violations</li>
-                        <li>Monitoring safe distance from other vehicles</li>
-                    </ul>
+    <section class="hero py-5">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="{% static 'images/hero_image.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Hero Image" width="700" height="500" loading="lazy">
                 </div>
-                <div class="col-md-6">
-                    <img src="{% static 'images/safety-image.jpg' %}" alt="Safety Alerts" class="img-fluid rounded custom-image">
+                <div class="col-lg-6">
+                  <h1 class="display-4 fw-bold lh-1 mb-3">Safety Driving, Our Priority</h1>                  <p class="lead">Our innovative fleet management system helps you monitor and improve driver performance, reduce operational costs, and enhance overall road safety. Join us in making the roads safer for everyone.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#overview" class="btn btn-light btn-lg px-4 me-md-2">Learn More</a>
+                        <a href="{% url 'register' %}" class="btn btn-success btn-lg px-4">Sign Up</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- templates/assistant/home.html -->
+<!-- Features Section -->
+    <section id="features">
 
+      <div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">Features</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div class="feature-icon bg-light">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+                </div>
+                <h2>Feature 1</h2>
+                <p>Paragraph of text beneath the heading to explain the feature. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <a href="#" class="icon-link">
+                    Learn More
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+            </div>
+            <div class="feature col">
+                <div class="feature-icon bg-light">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+                </div>
+                <h2>Feature 2</h2>
+                <p>Paragraph of text beneath the heading to explain the feature. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <a href="#" class="icon-link">
+                    Learn More
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+            </div>
+            <div class="feature col">
+                <div class="feature-icon bg-light">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                </div>
+                <h2>Feature 3</h2>
+                <p>Paragraph of text beneath the heading to explain the feature. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <a href="#" class="icon-link">
+                    Learn More
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+            </div>
+        </div>
+
+      </div>
+
+  </section>
+  
+
+    <!-- Testimonials Section -->
+    <section class="p-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8 text-center">
+          <h3 class="mb-4">Testimonials</h3>
+          <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+            numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+            quisquam eum porro a pariatur veniam.
+          </p>
+        </div>
+      </div>
     
-    <!-- Section 2: Driver Drowsiness Detection -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="{% static 'images/drowsiness-image.jpg' %}" alt="Driver Drowsiness Detection" class="img-fluid rounded custom-image">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="mb-4">Real-Time Drowsiness Detection</h2>
-                    <p>Our AI system continuously monitors driver behavior:</p>
-                    <ul>
-                        <li>Alerts for signs of drowsiness</li>
-                        <li>Prompt actions to prevent accidents</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="row text-center">
+        <div class="col-md-4 mb-5 mb-md-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3">Mohammed Ali</h5>
+          <h6 class="text-primary mb-3">Web Developer</h6>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i> ناس رجوله واخلاق وزي الفل
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+            </li>
+          </ul>
         </div>
+        <div class="col-md-4 mb-5 mb-md-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(27).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3">Ibrahim Essam</h5>
+          <h6 class="text-primary mb-3">Graphic Designer</h6>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
+            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3">John Smith</h5>
+          <h6 class="text-primary mb-3">Marketing Specialist</h6>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
+            dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="far fa-star fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Section 3: Violations Tracking and Rating -->
-    <section class="py-5">
+    <!-- Call-to-Action Section -->
+    <section class="cta text-center py-5 bg-success text-white">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="mb-4">Driver Violations Tracking</h2>
-                    <p>Automatic tracking of driver violations:</p>
-                    <ul>
-                        <li>Speeding</li>
-                        <li>Unsafe lane changes</li>
-                        <!-- Add more violations as needed -->
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <img src="{% static 'images/Fleet_Management_Dashboard.jpg' %}" alt="Violations Tracking" class="img-fluid rounded custom-image">
-                </div>
-            </div>
+            <h2>Ready to Get Started?</h2>
+            <a href="signup.html" class="btn btn-light mt-3">Sign Up Now</a>
         </div>
     </section>
+{% endblock %}
 
-    <!-- Add more sections as needed -->
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>Contact us at info@fleetai.com</p>
-        </div>
-    </footer>
-    <!-- Include Bootstrap JS (optional) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% block js_scripts_body %}
+
+
+{% endblock %}
