@@ -1,0 +1,94 @@
+
+.overview {
+    background-color: #28a745;
+    color: #333333;
+}
+
+.overview h2, .testimonials h2, .cta h2 {
+    margin-bottom: 1.5rem;
+    color: #28a745; /* Green headings */
+}
+
+
+#features {
+    background-color: #28a745;
+    padding: 3rem 0; /* Ensure proper padding */
+    color: #ffffff;
+
+    
+}
+
+/* Custom CSS for Features Section */
+.feature {
+    background-color: #28a745; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow */
+}
+
+.feature:hover {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+}
+
+.feature h2 {
+    color: #ffffff; /* Dark text for headings */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-top: 10px;
+}
+
+
+.feature p {
+    color: #e4e4e4; /* Darker text for paragraphs */
+}
+
+
+
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-link {
+    color: #ffffff; /* Green text for links */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.icon-link svg {
+    margin-left: 5px;
+}
+
+@media (max-width: 992px) {
+    .feature {
+        text-align: center; /* Center align on smaller screens */
+    }
+}
+
+
+.feature:hover h2 {
+    color: #1e7e34; /* Dark green text for headings on hover */
+}
+
+.feature:hover p {
+    color: #333333; /* Darker gray text for paragraphs on hover */
+}
+
+
+.feature:hover .icon-link {
+    color: #28a745; /* Green text for links */
+
+}
+
