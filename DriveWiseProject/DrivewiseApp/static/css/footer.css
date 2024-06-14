@@ -1,0 +1,27 @@
+/* Custom CSS for Footer Section */
+footer {
+    background-color: #f8f9fa; /* Light background */
+    color: #333333; /* Dark text */
+}
+
+footer h5 {
+    color: #28a745; /* Green headings */
+}
+
+footer a {
+    color: #333333; /* Dark text for links */
+}
+
+footer a:hover {
+    color: #28a745; /* Green text on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+footer .fab {
+    font-size: 1.5em; /* Increase icon size */
+}
+
+footer .text-center {
+    border-top: 1px solid #e9ecef; /* Add top border */
+    padding-top: 1rem; /* Add padding on top */
+}

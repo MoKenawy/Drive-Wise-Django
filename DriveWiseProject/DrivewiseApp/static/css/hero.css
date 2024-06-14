@@ -9,9 +9,6 @@
 .hero h1, .hero p {
     color: #28a745;
 }
-.hero .lead {
-    color: #f8f9fa; /* Light gray text for subheading */
-}
 
 
 .hero img {
