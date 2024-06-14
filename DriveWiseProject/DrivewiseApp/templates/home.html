@@ -15,7 +15,8 @@
                     <img src="{% static 'images/hero_image.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Hero Image" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
-                  <h1 class="display-4 fw-bold lh-1 mb-3">Safety Driving, Our Priority</h1>                  <p class="lead">Our innovative fleet management system helps you monitor and improve driver performance, reduce operational costs, and enhance overall road safety. Join us in making the roads safer for everyone.</p>
+                  <h1 class="display-4 fw-bold lh-1 mb-3">Safety Driving, Our Priority</h1>
+                  <p class="lead">Our innovative fleet management system helps you monitor and improve driver performance, reduce operational costs, and enhance overall road safety. Join us in making the roads safer for everyone.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         <a href="#overview" class="btn btn-light btn-lg px-4 me-md-2">Learn More</a>
                         <a href="{% url 'register' %}" class="btn btn-success btn-lg px-4">Sign Up</a>
@@ -35,9 +36,11 @@
                 <div class="feature-icon bg-light">
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
                 </div>
-                <h2>Feature 1</h2>
-                <p>Paragraph of text beneath the heading to explain the feature. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a href="#" class="icon-link">
+                <h2>Real-time Monitoring</h2>
+                <p>
+                  Instantly access live data on speed and distance, ensuring you stay informed and proactive about your vehicle's status.
+                 </p>
+                  <a href="#" class="icon-link">
                     Learn More
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
                 </a>
@@ -46,8 +49,10 @@
                 <div class="feature-icon bg-light">
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
                 </div>
-                <h2>Feature 2</h2>
-                <p>Paragraph of text beneath the heading to explain the feature. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <h2>Drowsiness Detection</h2>
+                <p>
+                  Our advanced system continuously monitors driver alertness, providing timely alerts to prevent fatigue-related hazards. This feature significantly reduces the risk of accidents by ensuring drivers remain vigilant and safe throughout their journey.     
+                </p>
                 <a href="#" class="icon-link">
                     Learn More
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
@@ -57,8 +62,12 @@
                 <div class="feature-icon bg-light">
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
                 </div>
-                <h2>Feature 3</h2>
-                <p>Paragraph of text beneath the heading to explain the feature. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <h2>Real-time Violation Detection and Logging</h2>
+
+                <p>
+                  Track and log speed, distance, and drowsiness violations in real-time, promoting compliance and improving driver behavior.
+
+                </p>
                 <a href="#" class="icon-link">
                     Learn More
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
@@ -196,7 +205,7 @@
 {% endblock %}
 
 
-{% block js_scripts_body %}
+{% block js_scripts %}
 
 
 {% endblock %}
