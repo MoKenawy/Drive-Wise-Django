@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -9,26 +9,18 @@
     <!-- MDB icon -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" rel="stylesheet" />
     <!-- Custom styles -->
     <style></style>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!----------------------------------------------------------------------- 
       
@@ -42,385 +34,305 @@
 
     <!--Main Navigation-->
     <header>
-      <!-- Intro settings -->
-      <style>
-        #intro {
-          /* Margin to fix overlapping fixed navbar */
-          margin-top: 58px;
-        }
+        <!-- Intro settings -->
+        <style>
+            #intro {
+                /* Margin to fix overlapping fixed navbar */
+                margin-top: 58px;
+            }
 
-        .sidebar {
-          display: none;
-        }
+            .sidebar {
+                display: none;
+            }
 
-        @media (min-width: 992px) {
-          .sidebar {
-            display: block;
-            width: 240px;
-            height: 100%;
-            position: fixed;
-            border-right: 0 20px 40px 0 rgba(0, 0, 0, 0.05) !important;
-            background-color: #fff;
-            z-index: 2000;
-          }
-          .sidebar-layout {
-            padding-left: 240px;
-          }
-        }
-      </style>
+            @media (min-width: 992px) {
+                .sidebar {
+                    display: block;
+                    width: 240px;
+                    height: 100%;
+                    position: fixed;
+                    border-right: 0 20px 40px 0 rgba(0, 0, 0, 0.05) !important;
+                    background-color: #fff;
+                    z-index: 2000;
+                }
 
-      <!-- Sidebar -->
-      <div class="sidebar pt-3 shadow-5">
-        <div class="list-group list-group-flush">
-          <a
-            href="#"
-            class="list-group-item list-group-item-action active ripple"
-            aria-current="true"
-          >
-            Sales
-          </a>
+                .sidebar-layout {
+                    padding-left: 240px;
+                }
+            }
+        </style>
 
-          
-          <a href="#" class="list-group-item list-group-item-action ripple">Traffic</a>
-          <a href="#" class="list-group-item list-group-item-action ripple">Invoices</a>
-          <a href="#" class="list-group-item list-group-item-action ripple">Orders</a>
+        <!-- Sidebar -->
+        <div class="sidebar pt-3 shadow-5">
+            <div class="list-group list-group-flush di">
+                <a href="#" class="list-group-item list-group-item-action active ripple" aria-current="true">
+                    Sales
+                </a>
+
+
+                <a href="#" class="list-group-item list-group-item-action ripple">Traffic</a>
+                <a href="#" class="list-group-item list-group-item-action ripple">Invoices</a>
+                <a href="#" class="list-group-item list-group-item-action ripple">Orders</a>
+            </div>
         </div>
-      </div>
-      <!-- Sidebar -->
+        <!-- Sidebar -->
 
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container-fluid">
-          <!-- Navbar brand -->
-          <a class="navbar-brand" target="_blank" href="https://mdbootstrap.com/docs/standard/">
-            <img
-              src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-              height="16"
-              alt=""
-              loading="lazy"
-              style="margin-top: -3px;"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarExample01"
-            aria-controls="navbarExample01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#intro">Home</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-                  rel="nofollow"
-                  target="_blank"
-                  >Learn Bootstrap 5</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank"
-                  >Download MDB UI KIT</a
-                >
-              </li>
-            </ul>
 
-            <ul class="navbar-nav list-inline">
-              <!-- Icons -->
-              <li class="">
-                <a
-                  class="nav-link"
-                  href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-                  rel="nofollow"
-                  target="_blank"
-                >
-                  <i class="fab fa-youtube"></i>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top d-lg-flex">
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                
+                <a class="navbar-brand col-lg-1" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+                    <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="16" alt=""
+                    loading="lazy" style="margin-top: -3px;" />
                 </a>
-              </li>
-              <li class="">
-                <a
-                  class="nav-link"
-                  href="https://www.facebook.com/mdbootstrap"
-                  rel="nofollow"
-                  target="_blank"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://twitter.com/MDBootstrap"
-                  rel="nofollow"
-                  target="_blank"
-                >
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://github.com/mdbootstrap/mdb-ui-kit"
-                  rel="nofollow"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarExample01"
+                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-lg-6">
+                    <div class="collapse navbar-collapse " id="navbarExample01">
+                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="#intro">Home</a>
+                            </li>
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'add_driver' %}">Add Drivers <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled">Disabled</a>
+                                </ul>
+
+
+                            </div>
+
+                    </div>
+
+                </div>
+
+                <ul class="navbar-nav ms list-inline col-lg-3">
+                    <!-- Icons -->
+                    <li class="">
+                        <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
+                            rel="nofollow" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow"
+                            target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Jumbotron -->
+        <div id="intro" class="py-5 text-center bg-light sidebar-layout">
+            <h1 class="mb-0 h4">Dashboard</h1>
         </div>
-      </nav>
-      <!-- Navbar -->
-
-      <!-- Jumbotron -->
-      <div id="intro" class="py-5 text-center bg-light sidebar-layout">
-        <h1 class="mb-0 h4">Dashboard</h1>
-      </div>
-      <!-- Jumbotron -->
+        <!-- Jumbotron -->
     </header>
     <!--Main Navigation-->
 
     <!--Main layout-->
     <main class="mt-4 mb-5 sidebar-layout">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <!--Section: Content-->
-            <section class="shadow-5 p-4 mb-4">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Users</th>
-                    <th scope="col">Sales</th>
-                    <th scope="col">Orders</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>2341</td>
-                    <td>335</td>
-                    <td>123</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>5643</td>
-                    <td>65454</td>
-                    <td>654</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>4532</td>
-                    <td>463</td>
-                    <td>967</td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
-            <!--Section: Content-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <!--Section: Content-->
+                    <section class="shadow-5 p-4 mb-4">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Users</th>
+                                    <th scope="col">Sales</th>
+                                    <th scope="col">Orders</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>2341</td>
+                                    <td>335</td>
+                                    <td>123</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>5643</td>
+                                    <td>65454</td>
+                                    <td>654</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>4532</td>
+                                    <td>463</td>
+                                    <td>967</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!--Section: Content-->
 
-            <!--Section: Content-->
-            <section class="shadow-5 p-4 mb-4">
-            
-              <p>Users</p>
-              <div class="progress mb-4">
-                <div
-                  class="progress-bar bg-success"
-                  role="progressbar"
-                  style="width: 25%;"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
+                    <!--Section: Content-->
+                    <section class="shadow-5 p-4 mb-4">
 
-              <p>Sales</p>
-              <div class="progress mb-4">
-                <div
-                  class="progress-bar bg-info"
-                  role="progressbar"
-                  style="width: 50%;"
-                  aria-valuenow="50"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
+                        <p>Users</p>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
 
-              <p>Orders</p>
-              <div class="progress mb-4">
-                <div
-                  class="progress-bar bg-warning"
-                  role="progressbar"
-                  style="width: 75%;"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
+                        <p>Sales</p>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
 
-              <p>Discounts</p>
-              <div class="progress mb-4">
-                <div
-                  class="progress-bar bg-danger"
-                  role="progressbar"
-                  style="width: 100%;"
-                  aria-valuenow="100"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-            
-            </section>
-            <!--Section: Content-->
-          </div>
+                        <p>Orders</p>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
 
-          <div class="col-md-4">
+                        <p>Discounts</p>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;"
+                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
 
-            <ul class="list-group list-group-flush shadow-5 p-4 mb-4">
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Cras justo odio
-                <span class="badge bg-primary rounded-pill">14</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dapibus ac facilisis in
-                <span class="badge bg-primary rounded-pill">2</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Morbi leo risus
-                <span class="badge bg-primary rounded-pill">1</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Cras justo odio
-                <span class="badge bg-primary rounded-pill">14</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dapibus ac facilisis in
-                <span class="badge bg-primary rounded-pill">2</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Morbi leo risus
-                <span class="badge bg-primary rounded-pill">1</span>
-              </li>
-            </ul>
+                    </section>
+                    <!--Section: Content-->
+                </div>
 
-            <ul class="list-group list-group-flush shadow-5 p-4 mb-4">
-              <li class="list-group-item">
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Cras justo odio
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Dapibus ac facilisis in
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Morbi leo risus
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Porta ac consectetur ac
-              </li>
-              <li class="list-group-item">
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Vestibulum at eros
-              </li>
-            </ul>
+                <div class="col-md-4">
 
-          </div>
+                    <ul class="list-group list-group-flush shadow-5 p-4 mb-4">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cras justo odio
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dapibus ac facilisis in
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Morbi leo risus
+                            <span class="badge bg-primary rounded-pill">1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cras justo odio
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dapibus ac facilisis in
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Morbi leo risus
+                            <span class="badge bg-primary rounded-pill">1</span>
+                        </li>
+                    </ul>
+
+                    <ul class="list-group list-group-flush shadow-5 p-4 mb-4">
+                        <li class="list-group-item">
+                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                            Cras justo odio
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                            Dapibus ac facilisis in
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                            Morbi leo risus
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                            Porta ac consectetur ac
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                            Vestibulum at eros
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
-      </div>
     </main>
     <!--Main layout-->
 
     <!--Footer-->
     <footer class="bg-light text-lg-left sidebar-layout">
-      <div class="py-4 text-center">
-        <a
-          role="button"
-          class="btn btn-primary btn-lg m-2"
-          href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-          rel="nofollow"
-          target="_blank"
-        >
-          Learn Bootstrap 5
-        </a>
-        <a
-          role="button"
-          class="btn btn-primary btn-lg m-2"
-          href="https://mdbootstrap.com/docs/standard/"
-          target="_blank"
-        >
-          Download MDB UI KIT
-        </a>
-      </div>
+        <div class="py-4 text-center">
+            <a role="button" class="btn btn-primary btn-lg m-2"
+                href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
+                Learn Bootstrap 5
+            </a>
+            <a role="button" class="btn btn-primary btn-lg m-2" href="https://mdbootstrap.com/docs/standard/"
+                target="_blank">
+                Download MDB UI KIT
+            </a>
+        </div>
 
-      <hr class="m-0" />
+        <hr class="m-0" />
 
-      <div class="text-center py-4 align-items-center">
-        <p>Follow MDB on social media</p>
-        <a
-          href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-          class="btn btn-primary m-1"
-          role="button"
-          rel="nofollow"
-          target="_blank"
-        >
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a
-          href="https://www.facebook.com/mdbootstrap"
-          class="btn btn-primary m-1"
-          role="button"
-          rel="nofollow"
-          target="_blank"
-        >
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a
-          href="https://twitter.com/MDBootstrap"
-          class="btn btn-primary m-1"
-          role="button"
-          rel="nofollow"
-          target="_blank"
-        >
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a
-          href="https://github.com/mdbootstrap/mdb-ui-kit"
-          class="btn btn-primary m-1"
-          role="button"
-          rel="nofollow"
-          target="_blank"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+        <div class="text-center py-4 align-items-center">
+            <p>Follow MDB on social media</p>
+            <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" class="btn btn-primary m-1" role="button"
+                rel="nofollow" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/mdbootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/MDBootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/mdbootstrap/mdb-ui-kit" class="btn btn-primary m-1" role="button" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
 
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-      </div>
-      <!-- Copyright -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
     </footer>
     <!--Footer-->
-    
-  </body>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- MDB -->
-  <script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.umd.min.js"></script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.umd.min.js"></script>
+
 </html>

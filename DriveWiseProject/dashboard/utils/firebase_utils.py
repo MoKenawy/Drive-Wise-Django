@@ -18,8 +18,9 @@ class FirebaseHelper:
         return drivers_data
 
     def get_driver_data(self, driver_id):
+        self.ref.child('drivers').child(driver_id)
         return self.ref.child('drivers').child(driver_id).get()
- 
+
     def get_driver_data(self, driver_id):
         return self.ref.child('drivers').child(driver_id).get()
 
@@ -29,26 +30,55 @@ class FirebaseHelper:
         speed_violation_count = 0
         distance_violation_count = 0
         drowsiness_violation_count = 0
-        if 'violations' in driver_data:
-            violations_count = len(driver_data['violations'])
-            violation_ref = self.ref.child('drivers').child(driver_id).child('violations')
-            for violation_id, violation_data in violation_ref.get().items():
-                violation_type = violation_data.get('type')
-                if violation_type == 'speed_violation':
-                    speed_violation_count += 1
-                elif violation_type == 'distance_violation':
-                    distance_violation_count += 1
-                elif violation_type == 'drowsiness_violation':
-                    drowsiness_violation_count += 1
+        violations_history = None
+        try:
+            if 'violations' in driver_data:
+                violations_count = len(driver_data['violations'])
+                violation_ref = self.ref.child('drivers').child(driver_id).child('violations')
+                violations_history = violation_ref.get().items()
+
+                for violation_id, violation_data in violation_ref.get().items():
+                    violation_type = violation_data.get('type')
+                    if violation_type == 'speed_violation':
+                        speed_violation_count += 1
+                    elif violation_type == 'distance_violation':
+                        distance_violation_count += 1
+                    elif violation_type == 'drowsiness_violation':
+                        drowsiness_violation_count += 1
+        except Exception as e:
+            print(e)
 
         violations_stats = {
             'violations_count': violations_count,
             'speed_violation_count': speed_violation_count,
             'distance_violation_count': distance_violation_count,
-            'drowsiness_violation_count': drowsiness_violation_count
+            'drowsiness_violation_count': drowsiness_violation_count,
+            'violations_history':violations_history
         }
+
         return violations_stats
     
+
+
+    def get_top_records(self, ref):
+        
+        try:
+            ref.get
+            snapshot = ref.order_by_child(ref.child('time')).limit_to_last(5).get()
+            records = []
+            for key, val in snapshot.items():
+                records.append({'key': key, **val})
+
+            # Sorting the records in descending order (because limit_to_last sorts in ascending order)
+            records.sort(key=lambda x: x['value'], reverse=True)
+            
+            for record in records:
+                print(record)
+            return records
+        except Exception as error:
+            print('Error fetching records:', error)
+            raise error
+
     def add_driver(self, request,driver_data):
         driver_id = driver_data['driver_id']
         driver_info = {

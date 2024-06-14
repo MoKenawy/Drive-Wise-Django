@@ -1,0 +1,29 @@
+{% for key, violation in page_obj.violations_stats %}
+<tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ violation.type }}</td>
+    <td>
+        {% if violation.type == "distance_violation" %}
+        {{ violation.details.distance }}
+        {% elif violation.type == "speed_violation" %}
+        {{ violation.details.car_speed }}
+        {% elif violation.type == "drowsiness_violation" %}
+        <img src="{{ violation.details.image }}" alt="Drowsiness Image" />
+        {% else %}
+        N/A
+        {% endif %}
+    </td>
+    <td>
+        {% if violation.type == "speed_violation" %}
+        {{ violation.details.speed_threshold }}
+        {% else %}
+        N/A
+        {% endif %}
+    </td>
+    <td>{{ violation.timestamp }}</td>
+</tr>
+{% empty %}
+<tr>
+    <td colspan="5">No violations found.</td>
+</tr>
+{% endfor %}

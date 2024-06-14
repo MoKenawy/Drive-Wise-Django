@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        .container-fluid {
+            height: 100%;
+        }
+
+        /* Custom styles go here */
+        .sidebar {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .statistics-section {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #f8f9fa;
+            /* Light gray background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            /* Optional: Add a subtle shadow */
+            width: 100%;
+
+        }
+
+        .statistics-card {
+            background-color: #ffffff;
+            /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Optional: Add a subtle shadow */
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #343a40;
+            /* Dark background */
+            color: #ffffff;
+            /* White text */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" height="30">
+                Fleet Management
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row" style="height:100%;">
+            <!-- Sidebar -->
+            <aside class="col-md-3 bg-dark text-white">
+                <div class="sidebar">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vehicles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Drivers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Routes</a>
+                        </li>
+                        <!-- Add more sections as needed -->
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9">
+                <div class="container-fluid">
+                    <!-- Statistics Content -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container-fluid">
+
+                                <div class="statistics-section">
+                                    <div class="col-md-6">
+                                        <div class="statistics-card">
+                                            <h3>Statistics 1</h3>
+                                            <p>Statistics details here...</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="statistics-card">
+                                            <h3>Statistics 2</h3>
+                                            <p>Statistics details here...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="statistics-section">
+                                    <div class="col-md-6">
+                                        <div class="statistics-card">
+                                            <h3>Statistics 3</h3>
+                                            <p>Statistics details here...</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="statistics-card">
+                                            <h3>Statistics 4</h3>
+                                            <p>Statistics details here...</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Row in Statistics Content -->
+                    </div>
+
+
+                    <!-- Footer -->
+                    <div class="row footer">
+                        <div class="col-md-12 text-center">
+                            &copy; 2024 Fleet Management. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        </main>
+    </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-21e3E1+g3m/bO/P9ChP5rPugpxz0ySMKNtG2bF5Y8Ih+4sJS7Y0o9DzzE7KmF/t+"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy0HcRMfrEynD5N6vO8W0p4mUhp0ARvtBp"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
