@@ -45,12 +45,14 @@ def driver_detail(request, driver_id):
     drivers = firebase_helper.get_all_drivers_data()  # Retrieve all drivers
     driver_data = firebase_helper.get_driver_data(driver_id)
     violations_stats = firebase_helper.get_violations_stats(driver_id)
+
     context = {
         'drivers': drivers,  # Pass all drivers to the template
         'driver_id': driver_id,
         'driver_data': driver_data,
         'violations_stats': violations_stats
     }
+    print(violations_stats.get('drowsiness_violation_count'))
     return render(request, 'driver_detail.html', context)
 
 

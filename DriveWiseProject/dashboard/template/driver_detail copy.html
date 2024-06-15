@@ -1,67 +1,32 @@
 {% extends "dashboard_template.html" %}
 
-{% block css_styles %}
-
+{% block js_scripts_headers %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'dashboard/css/violations_table.css'%}">
-<link rel="stylesheet" href="{% static 'dashboard/css/violations_stats.css'%}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/violations-table'%}">
+
 {% endblock %}
 
 
 {% block content %}
 
 
+<!-- Jumbotron -->
+<div id="intro" class="py-5 text-center bg-light ">
+    <h1 class="mb-0 h4">Driver: {{ driver_id }}</h1>
+</div>
+<!-- Jumbotron -->
 
-
-<main class="container-fluid">
-
-
+<main class="">
 
     <div class="container-fluid">
-
-
-        <!-- Jumbotron -->
-        <div id="intro" class="py-5 text-center bg-light ">
-            <!-- Driver name & Rating -->
-            <div class="row">
-                <!-- Name -->
-                <div class=" d-flex align-items-stretch p-3 align-items-center">
-
-                    <div class="col-md-4 ">
-                        <div class="card h-100 teststyle">
-                            <div class="card-body">
-                                <h5 class="card-title">Driver ID : {{driver_id}}</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Best Driver -->
-                    <div class="col-md-4 ">
-                        <div class="card h-100">
-                            <div class="card-body alert-success">
-                                <h5 class="card-title">Rating: {{driver_data.rating}}</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- End Driver name & Rating -->
-
-
-        </div>
-        <!--End Jumbotron -->
-
         <div class="row">
-
             <div class="col-md-8 ">
                 <!--Section: Content-->
                 <section class="shadow-5 p-4 mb-4 ">
-                    <table class="table violations_table">
+                    <table class="table" >
                         <thead>
                             <tr class="">
-                                <th id="" class="table_head_col" scope="col">#</th>
+                                <th class="" scope="col">#</th>
                                 <th class="" scope="col">Type</th>
                                 <th class="" scope="col">Value</th>
                                 <th class="" scope="col">Threshold</th>
@@ -100,10 +65,39 @@
 
                 </section>
 
+                <!--Section: Content-->
+
+                <section class="shadow-5 p-4 mb-4">
+
+                    <p>Users</p>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <p>Sales</p>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <p>Orders</p>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <p>Discounts</p>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                </section>
+                <!--Section: Content-->
             </div>
 
-            <!-- Overall_stats -->
-            <div class="col-md-4 violations_stats">
+            <div class="col-md-4">
 
                 <ul class="list-group list-group-flush shadow-5 p-4 mb-4">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -115,24 +109,43 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Speed violations
-                        <span class="badge bg-success rounded-pill">{{violations_stats.speed_violation_count}}</span>
+                        <span class="badge bg-success rounded-pill">{{ violations_stats.speed_violation_count }}</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Distance violations
                         <span class="badge bg-success rounded-pill">{{violations_stats.distance_violation_count}}</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">Drowsiness
-                        violations
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Drowsiness violations
                         <span
                             class="badge bg-success rounded-pill">{{violations_stats.drowsiness_violation_count}}</span>
                     </li>
                 </ul>
 
+                <ul class="list-group list-group-flush shadow-5 p-4 mb-4">
+                    <li class="list-group-item">
+                        <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                        Cras justo odio
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                        Dapibus ac facilisis in
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                        Morbi leo risus
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                        Porta ac consectetur ac
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
+                        Vestibulum at eros
+                    </li>
+                </ul>
+
             </div>
-
         </div>
-
-
         <div class="row">
             <div class="col-lg-12">
                 <p id="speedViolationCount" hidden>
@@ -145,6 +158,9 @@
                 <canvas id="violationsChart"></canvas>
             </div>
         </div>
+    </div>
+
+
     </div>
 
 </main>

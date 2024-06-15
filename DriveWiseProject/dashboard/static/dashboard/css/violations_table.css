@@ -1,0 +1,38 @@
+.violations-table{
+    background-color: red;
+    color: #ffffff;
+}
+
+.table .table_head_col {
+    background-color: #28a745;
+
+}
+
+
+#table_num{
+    background-color: #28a745;
+    color: white;
+
+}
+.test {
+    color: aqua;
+    padding: 5px;
+
+}
+
+.violations_table th {
+    background-color: #28a745;
+    color : #ffffff;
+}
+.violations_table thead {
+    border-radius: 2px;
+    border-width: 3px;
+    border-color: rgb(209, 209, 209);
+
+}
+
+.violations_table * {
+    border-right: #28a745;
+    border-width: 2px;
+
+}

@@ -6,182 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Material Design for Bootstrap</title>
-    <!-- MDB icon -->
-    {% load static %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/m/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.are.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+
+
     <!-- Custom styles -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+    
+    {% block css_styles %}
 
-
-
-    {% block js_scripts_headers %}
 
     {% endblock %}
 
-    <style></style>
 </head>
 
 <body>
-
-    <!----------------------------------------------------------------------- 
-      
-    This template was created with MDB 5 UI KIT (Material Design for Bootstrap 5).
-
-    MDB is a free (MIT license) library, that provides extra features and significantly extends Bootstrap's capabilities.
-
-    Visit our website to learn more: https://mdbootstrap.com/docs/standard/ 
-  
-    --------------------------------------------------------------------------->
-
-    <!--Main Navigation-->
     <header>
-        <!-- Intro settings -->
-        <style>
-            #intro {
-                /* Margin to fix overlapping fixed navbar */
-                margin-top: 58px;
-            }
 
-            @media (min-width: 992px) {
-                .sidebar {
-                    display: block;
-                    width: 240px;
-                    height: 100%;
-                    position: fixed;
-                    border-right: 0 20px 40px 0 rgba(0, 0, 0, 0.05) !important;
-                    background-color: #fff;
-                    z-index: 2000;
-                }
+        <div class="container-fluid">
+            <!--Main Navigation-->
+            <!-- Navbar -->
+            <div class="row">
+                <div class="col-lg-12">
 
-                .sidebar-layout {
-                    padding-left: 240px;
-                }
-            }
-        </style>
-
-
-        <!-- Sidebar -->
-        <div class="sidebar pt-3 shadow-5 p-0 ms-0">
-            <div class="list-group list-group-flush di">
-                {% for driver in drivers %}
-                <a href="{% url 'driver_detail' driver.driver_id %}"
-                    class="list-group-item list-group-item-action ripple">
-                    <strong class="mb-1">{{ driver.driver_id }}</strong>
-                    <div class="card-text">Rating: <span id="rating-stars" data-rating="{{ driver.rating }}"></span>
-                    </div>
-
-                </a>
-
-                {% endfor %}
-
-            </div>
-        </div>
-        <!-- Sidebar -->
-
-
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top d-lg-flex p-0">
-            <div class="container-fluid">
-                <!-- Navbar brand -->
-
-                <a class="navbar-brand col-lg-1" target="_blank" href="https://mdbootstrap.com/docs/standard/">
-                    <img src="{% static 'dashboard/images/logo.png' %}" height="50" width="60" alt="" loading="lazy"
-                        style="margin-top: -3px;" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarExample01"
-                    aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="col-lg-6">
-                    <div class="collapse navbar-collapse " id="navbarExample01">
-                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" aria-current="page" href="#intro">Home</a>
-                            </li>
-                            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" target="_blank" href="{% url 'dashboard' %}">
+                                <img src="{% static 'images/logo.png' %}" height="50" width="60" alt="Logo"
+                                    loading="lazy" />
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarExample01">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'add_driver' %}">Add Drivers <span
-                                                class="sr-only">(current)</span></a>
+                                        <a class="nav-link active" aria-current="page" href="#intro">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
+                                        <a class="nav-link" href="{% url 'add_driver' %}">Add a driver</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Remove a driver</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link disabled">Disabled</a>
+                                    </li>
                                 </ul>
-
-
+                                <ul class="navbar-nav ms-auto">
+                                    <!-- Social icons -->
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
+                                            rel="nofollow" target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow"
+                                            target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow"
+                                            target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit"
+                                            rel="nofollow" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar -->
 
+
+
+            <div class="row">
+                <!-- Sidebar and Main Content -->
+                <div class="col-lg-3">
+                    <div class="sidebar shadow-5" style="height: 100%;">
+                        <!-- Sidebar -->
+                        <div class="custombar p-3">
+                            <!-- Sidebar content -->
+                            <div class="list-group list-group-flush">
+                                {% for driver in drivers %}
+                                <a href="{% url 'driver_detail' driver.driver_id %}"
+                                    class="list-group-item list-group-item-action ripple py-3 lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <div>
+                                            <strong class="mb-1">{{ driver.driver_id }}</strong>
+
+                                        </div>
+                                        <div class="card-text"><span id="rating-stars"
+                                                data-rating="{{ driver.rating }}"></span></div>
+                                    </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
+                    <!-- End Sidebar -->
+
 
                 </div>
 
-                <ul class="navbar-nav ms list-inline col-lg-3">
-                    <!-- Icons -->
-                    <li class="">
-                        <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-                            rel="nofollow" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow"
-                            target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                </ul>
+                <!-- Main Content -->
+                <div class="col-lg-9 main-content">
+                    {% block content %}
+                    <!-- Driver details will be displayed here -->
+                    {% endblock %}
+                </div>
+                <!-- End Main Content -->
             </div>
-        </nav>
-        <!-- Navbar -->
-        <!-- Jumbotron -->
-        <div id="intro" class="py-5 text-center bg-light sidebar-layout">
-            <h1 class="mb-0 h4">Dashboard</h1>
-        </div>
-        <!-- Jumbotron -->
-    </header>
-    <!--Main Navigation-->
+            <!-- End Sidebar and Main Content -->
 
-    {% block content %}
-    <!-- Driver details will be displayed here -->
+    </header>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.umd.min.js"></script>
+    <script src="{% static 'dashboard/js/star_rating.js' %}"></script>
+
+    {% block js_scripts_body %}
+
     {% endblock %}
 
-
-
 </body>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-
-<!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.umd.min.js"></script>
-<script src="{% static 'dashboard/js/star_rating.js' %}"></script>
-
-{% block js_scripts_body %}
-
-{% endblock %}
 
 </html>

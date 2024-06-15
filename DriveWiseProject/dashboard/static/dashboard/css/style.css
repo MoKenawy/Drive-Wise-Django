@@ -42,3 +42,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.custombar * {
+ background-color: green;
+
+}
