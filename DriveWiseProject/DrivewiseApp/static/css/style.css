@@ -37,3 +37,26 @@
     background-color: #28a745; /* Green background on hover */
     color: #ffffff; /* White text on hover */
 }
+
+
+body {
+    color: #28a745;
+
+}
+
+.btn {
+    background-color: #28a745;
+
+}
+.btn:active {
+    background-color: #ffffff;
+    color: #28a745;
+
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #188531;
+    color: gainsboro;
+}
+
+

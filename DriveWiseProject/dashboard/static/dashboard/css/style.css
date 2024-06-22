@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    color: #28a745;
 }
 
 h1 {
@@ -45,5 +46,24 @@ a:hover {
 
 .custombar * {
  background-color: #ffffff !important; 
+}
 
+.btn {
+    background-color: #28a745;
+
+}
+.btn:active {
+    background-color: #ffffff;
+    color: #28a745;
+
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #188531;
+    color: gainsboro;
+}
+
+a.nav-link:hover, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    text-decoration: none;
+    color: #28a745;
 }

@@ -12,3 +12,7 @@ class AddDriverForm(forms.Form):
     #photo = forms.ImageField(label='Photo', required=False)
     # photo = forms.FileField(label='Photo', required=False)
 
+
+class RemoveDriverForm(forms.Form):
+    driver_id = forms.CharField(label='Driver ID', max_length=100)
+

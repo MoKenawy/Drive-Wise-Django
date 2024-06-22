@@ -3,45 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <!-- Include Bootstrap CSS -->
+    <title>Remove Driver</title>
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- materializecss -->
     {% load materializecss %}
 
-    <!-- materializecss -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/css/materialize.min.css" integrity="sha256-qj3p6P1fJIV+Ndv7RW1ovZI2UhOuboj9GcODzcNFIN8=" crossorigin="anonymous" />
-    
+
+
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
 
 
-    <!-- Optional: Your custom CSS -->
-    <!-- <link rel="stylesheet" href="path/to/your/custom.css"> -->
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="p-3 mb-2 .bg-white">
-                        <div class="card-header">
-                                <h4 class="text-center">Register</h2>
-                        </div>                
-                    </div>
 
-                    <div class="card-body">
-                        <form method="post">
-                            {% csrf_token %}
-                            {{ form|materializecss }}
-                            <button type="submit" class="btn btn-block">Register</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    
+    <div class="container">
+        <div class="p-3 mb-2 .bg-white"">
+            <h4 >Remove a driver</h1>
+
         </div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|materializecss }}
+
+            <button type="submit" class="btn">Remove Driver</button>
+        </form>
     </div>
-    <!-- Include Bootstrap JS (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

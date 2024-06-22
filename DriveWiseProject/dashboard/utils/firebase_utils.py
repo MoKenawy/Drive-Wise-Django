@@ -99,6 +99,13 @@ class FirebaseHelper:
 
         self.ref.child('drivers').child(driver_id).set(driver_info)
 
+    def remove_driver(self,driver_data):
+        driver_id = driver_data['driver_id']
+        ref = db.reference(f'drivers/{driver_id}')
+        ref.delete()
+        print("Record deleted successfully")
+
+
 
     def upload_driver_image(self, driver_id,  image_file):
         image_name = f"{driver_id}_{image_file.name}"

@@ -3,7 +3,7 @@ from django.template import loader
 from django.shortcuts import render
 from .utils.firebase_utils import FirebaseHelper
 from DrivewiseApp.decorators import firebase_auth_required
-from .forms import AddDriverForm
+from .forms import AddDriverForm , RemoveDriverForm
 from django.core.files.storage import FileSystemStorage
 from django.views import View
 
@@ -75,3 +75,17 @@ class AddDriverView(View):
             firebase_helper.add_driver(request,driver_data)
             return redirect('dashboard')
         return render(request, 'add_driver.html', {'form': form})
+
+class RemoveDriverView(View):
+    def get(self, request):
+        form = RemoveDriverForm()
+        return render(request, 'remove_driver.html', {'form': form})
+
+    def post(self, request):
+        form = RemoveDriverForm(request.POST, request.FILES)
+        if form.is_valid():
+            driver_data = form.cleaned_data
+            print(f"removing a driver - Driver data : {driver_data}")
+            firebase_helper.remove_driver(driver_data)
+            return redirect('dashboard')
+        return render(request, 'remove_driver.html', {'form': form})

@@ -21,8 +21,8 @@
 
     <!-- Custom styles -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'dashboard/css/dashboard_main.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
     
     {% block css_styles %}
 
@@ -60,11 +60,11 @@
                                         <a class="nav-link" href="{% url 'add_driver' %}">Add a driver</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Remove a driver</a>
+                                        <a class="nav-link" href="{% url 'remove_driver' %}">Remove a driver</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link disabled">Disabled</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
 
                             </div>

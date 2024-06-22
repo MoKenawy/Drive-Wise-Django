@@ -32,3 +32,7 @@
     margin-bottom: 3px;
 
 }
+
+a.nav-link:hover {
+    text-decoration: none;
+}

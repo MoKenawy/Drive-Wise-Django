@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Driver</title>
-    {% load static %}
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
-
     <!-- materializecss -->
     {% load materializecss %}
 
@@ -16,10 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/css/materialize.min.css" integrity="sha256-qj3p6P1fJIV+Ndv7RW1ovZI2UhOuboj9GcODzcNFIN8=" crossorigin="anonymous" />
 
 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+
 </head>
 <body>
     <div class="container">
-        <div class="p-3 mb-2 .bg-white" style="color: #2bbbad;">
+        <div class="p-3 mb-2 .bg-white">
             <h4 >Add a new driver</h1>
 
         </div>
@@ -59,7 +60,7 @@
             </div> -->
             {{ form|materializecss }}
 
-            <button type="submit" class="btn btn-primary">Add Driver</button>
+            <button type="submit" class="btn">Add Driver</button>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
