@@ -5,22 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>Drivewise Dashboard</title>
     <link href="https://cdn.jsdelivr.net/m/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.are.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.are.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> -->
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" >
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
 
 
 
     <!-- Custom styles -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/dashboard_main.css' %}">
     
     {% block css_styles %}
 
@@ -64,34 +66,7 @@
                                         <a class="nav-link disabled">Disabled</a>
                                     </li>
                                 </ul>
-                                <ul class="navbar-nav ms-auto">
-                                    <!-- Social icons -->
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-                                            rel="nofollow" target="_blank">
-                                            <i class="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow"
-                                            target="_blank">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow"
-                                            target="_blank">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit"
-                                            rel="nofollow" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+
                             </div>
                         </div>
                     </nav>
@@ -104,9 +79,12 @@
             <div class="row">
                 <!-- Sidebar and Main Content -->
                 <div class="col-lg-3">
+                    <div>
+                        <h3 class="ms-lg-4 mt-lg-4">List of drivers:</h3>
+                    </div>
                     <div class="sidebar shadow-5" style="height: 100%;">
                         <!-- Sidebar -->
-                        <div class="custombar p-3">
+                        <div class=" p-3">
                             <!-- Sidebar content -->
                             <div class="list-group list-group-flush">
                                 {% for driver in drivers %}

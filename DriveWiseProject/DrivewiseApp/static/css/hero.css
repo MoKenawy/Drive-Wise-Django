@@ -6,11 +6,41 @@
 }
 
 
-.hero h1, .hero p {
+.hero h1{
     color: #28a745;
 }
-
+.hero p {
+    color: #929292;
+}
 
 .hero img {
     border-radius: 0.5rem; /* Optional: Add rounded corners to the image */
+}
+
+
+.btn-learn_more {
+    background-color: #ffffff; /* Green background */
+    color: #28a745; /* White text */
+    border: solid 1px #28a745; /* Green border */
+}
+
+.btn-learn_more:hover {
+    background-color: #28a745; /* Darker green background on hover */
+    border: solid 1px #1e7e34; /* Darker green border on hover */
+    color: #ffffff; /* White text */
+
+}
+
+.btn-signup {
+    background-color: #28a745; /* Green background for signup button */
+    border-color: #28a745; /* Green border color */
+    color: #ffffff; /* White text */
+
+}
+
+.btn-signup:hover {
+    background-color: #1e7e34; /* Darker green background on hover */
+    border-color: #1e7e34; /* Darker green border color on hover */
+    color: #ffffff; /* White text */
+
 }

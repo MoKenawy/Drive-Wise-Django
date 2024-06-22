@@ -23,7 +23,12 @@
 }
 
 .overall_stats {
-    background-color: #e9ecef;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+}
+.list-group-flush>.list-group-item {
+    border-radius: 6px;
+    border-width: 0.5px;
+    margin-bottom: 3px;
 
 }
-

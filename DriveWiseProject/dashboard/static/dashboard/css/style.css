@@ -44,6 +44,6 @@ a:hover {
 }
 
 .custombar * {
- background-color: green;
+ background-color: #ffffff !important; 
 
 }
