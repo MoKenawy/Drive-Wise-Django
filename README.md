@@ -31,7 +31,8 @@ The Manager's Dashboard repository provides tools for fleet managers to monitor 
 
 - Django
 - Firebase admin
-- MDX
+- bootstrap
+- MDB5
 
 ## Installation
 
