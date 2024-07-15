@@ -77,9 +77,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Related Repositories
 
-- [ADAS (Drivers)](https://github.com/MoKenawy/Driving-Station/): Provides safety features for drivers, including detection of overspeeding, drowsiness, and safe distance monitoring.
+- [ADAS (Drivers)](https://github.com/MoKenawy/DriveWise-Driving-Station): Provides safety features for drivers, including detection of overspeeding, drowsiness, and safe distance monitoring.
 
 ## Contact
 
 For any questions or feedback, please contact:
-- Mohammed Gamal: [email@example.com](mailto:email@example.com)
+- Mohammed Gamal: [mokenawy.business@gmail.com](mailto:mokenawy.business@gmail.com)
