@@ -10,10 +10,9 @@
 3. [Dependencies](#dependencies)
 4. [Installation](#installation)
 5. [Usage](#usage)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Related Repositories](#related-repositories)
-9. [Contact](#contact)
+6. [License](#license)
+7. [Related Repositories](#related-repositories)
+8. [Contact](#contact)
 
 ## Introduction
 
