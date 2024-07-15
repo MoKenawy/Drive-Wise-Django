@@ -62,10 +62,6 @@ The Manager's Dashboard repository provides tools for fleet managers to monitor 
 - **Violation Logs**: Searchable and filterable logs of all driver violations.
 ![Violations Logging](https://github.com/MoKenawy/Drive-Wise-Django/blob/main/Drive-wise%20Dashboard%20Docs/Driver%20details.png)
 
-## Contributing
-
-We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) to learn how you can help improve the Manager's Dashboard.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
