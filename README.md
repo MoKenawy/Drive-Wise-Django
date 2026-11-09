@@ -189,6 +189,9 @@ STORAGE_BUCKET_URL=<your-project>.appspot.com
 
 # Absolute or relative path to your service-account JSON key
 FIREBASE_CREDS_FILEPATH=path/to/serviceAccountKey.json
+
+# Web API key, used for the email/password sign-in call
+FIREBASE_WEB_API_KEY=<your-web-api-key>
 ```
 
 | Variable | Required | Purpose |
@@ -196,10 +199,15 @@ FIREBASE_CREDS_FILEPATH=path/to/serviceAccountKey.json
 | `DB_URL` | ✅ | Realtime Database endpoint that stores drivers and violations. |
 | `STORAGE_BUCKET_URL` | ✅ | Cloud Storage bucket used for uploaded driver images. |
 | `FIREBASE_CREDS_FILEPATH` | ✅ | Path to the service-account key used by the Firebase Admin SDK. |
+| `FIREBASE_WEB_API_KEY` | ✅ | Identifies your project on the Identity Toolkit sign-in endpoint. Found in the Firebase console under *Project settings → General → Web API Key*. |
 
-> **Note:** all three variables are read at import time in
+> **Note:** the first three are read at import time in
 > `DriveWiseProject/settings.py`. If any of them is missing, Django will fail to
 > start — so set them before running `manage.py`.
+>
+> `FIREBASE_WEB_API_KEY` is read lazily, the first time somebody signs in. If it
+> is missing you will get an `ImproperlyConfigured` error at that point rather
+> than at startup.
 
 ---
 
