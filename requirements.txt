@@ -1,0 +1,30 @@
+# Drive-Wise Manager's Dashboard — Python dependencies
+#
+#   python -m venv .venv
+#   .venv\Scripts\activate        (Windows)   /   source .venv/bin/activate  (macOS/Linux)
+#   pip install -r requirements.txt
+#
+# Lower bounds are the versions this project was developed and tested against
+# (Python 3.12). Upper bounds stop a future major release from breaking the app
+# while still allowing wheels that support newer Python versions.
+#
+# Transitive dependencies (google-*, grpcio, protobuf, cryptography, ...) are
+# resolved automatically by pip and are intentionally not listed here.
+
+# --- Web framework ---------------------------------------------------------
+Django>=5.0.6,<6.0
+
+# --- Firebase: Realtime Database, Auth and Cloud Storage -------------------
+firebase-admin>=6.5.0,<7.0
+
+# --- Reads Firebase credentials and URLs from .env -------------------------
+python-dotenv>=1.0.1,<2.0
+
+# --- MaterializeCSS form-rendering template filter -------------------------
+django-materializecss-form>=1.1.17,<2.0
+
+# --- Image handling, required by Django's ImageField -----------------------
+Pillow>=10.3.0
+
+# --- HTTP client used for the Firebase REST sign-in call -------------------
+requests>=2.32.3,<3.0
