@@ -1,3 +1,42 @@
+# --- Secrets & credentials -------------------------------------------------
 .env
+*serviceAccountKey*.json
+firebase-adminsdk*.json
 Logos/*
 
+# --- Virtual environments --------------------------------------------------
+drive_wise/
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Django ----------------------------------------------------------------
+*.log
+db.sqlite3
+db.sqlite3-journal
+/media/
+/staticfiles/
+/static_root/
+
+# --- Vendored UI kits (loaded from CDN, see templates) ---------------------
+MDB5-*.zip
+
+# --- Editors & OS ----------------------------------------------------------
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
